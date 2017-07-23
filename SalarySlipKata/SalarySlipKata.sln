@@ -3,8 +3,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalarySlip.Services", "src\SalarySlip.Services\SalarySlip.Services.csproj", "{9350D241-CF04-495F-B73E-25F216FBC06C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2B6B60AE-D923-4DFA-B040-40A552ADBE6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{91FA1B06-BE82-45D3-93E2-69A7E2D8D763}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalarySlip.Services.Tests", "test\SalarySlip.Services.Tests\SalarySlip.Services.Tests.csproj", "{FBB7AE71-57AF-45BA-88F2-33A7130B0D9B}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9350D241-CF04-495F-B73E-25F216FBC06C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9350D241-CF04-495F-B73E-25F216FBC06C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9350D241-CF04-495F-B73E-25F216FBC06C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9350D241-CF04-495F-B73E-25F216FBC06C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBB7AE71-57AF-45BA-88F2-33A7130B0D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBB7AE71-57AF-45BA-88F2-33A7130B0D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBB7AE71-57AF-45BA-88F2-33A7130B0D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBB7AE71-57AF-45BA-88F2-33A7130B0D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9350D241-CF04-495F-B73E-25F216FBC06C} = {2B6B60AE-D923-4DFA-B040-40A552ADBE6A}
+		{FBB7AE71-57AF-45BA-88F2-33A7130B0D9B} = {91FA1B06-BE82-45D3-93E2-69A7E2D8D763}
 	EndGlobalSection
 EndGlobal
