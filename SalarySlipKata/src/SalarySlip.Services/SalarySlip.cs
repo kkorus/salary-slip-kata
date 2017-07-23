@@ -12,5 +12,6 @@
         public int Id { get; }
         public string Name { get; }
         public decimal GrossSalary { get; }
+        public decimal NationalInsurance { get; set; }
     }
 }

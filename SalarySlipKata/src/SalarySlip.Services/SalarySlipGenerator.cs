@@ -6,6 +6,11 @@ namespace SalarySlip.Services
     {
         public SalarySlip GenerateFor(Employee employee)
         {
+            if (employee == null)
+            {
+                throw new ArgumentNullException(nameof(employee));
+            }
+
             var grossSalary = CalculateGrossSalary(employee.AnnualGrossSalary);
             var salarySlip = new SalarySlip(employee.Id, employee.Name, grossSalary);
             return salarySlip;
