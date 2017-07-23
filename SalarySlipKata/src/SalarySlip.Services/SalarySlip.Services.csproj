@@ -41,6 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Employee.cs" />
+    <Compile Include="GrossSalaryCalculator.cs" />
+    <Compile Include="IGrossSalaryCalculator.cs" />
+    <Compile Include="INationalInsuranceCalculator.cs" />
+    <Compile Include="NationalInsuranceCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalarySlip.cs" />
     <Compile Include="SalarySlipGenerator.cs" />

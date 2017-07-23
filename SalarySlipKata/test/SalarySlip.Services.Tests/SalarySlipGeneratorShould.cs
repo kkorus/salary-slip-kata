@@ -12,7 +12,9 @@ namespace SalarySlip.Services.Tests
         [SetUp]
         public void SetUp()
         {
-            _salarySlipGenerator = new SalarySlipGenerator();
+            var grossSalaryCalculator = new GrossSalaryCalculator();
+            var nationalInsurance = new NationalInsuranceCalculator();
+            _salarySlipGenerator = new SalarySlipGenerator(grossSalaryCalculator, nationalInsurance);
         }
 
         [Test]

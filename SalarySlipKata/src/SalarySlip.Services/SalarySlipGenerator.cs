@@ -4,6 +4,17 @@ namespace SalarySlip.Services
 {
     public class SalarySlipGenerator
     {
+        private readonly IGrossSalaryCalculator _grossSalaryCalculator;
+        private readonly INationalInsuranceCalculator _nationalInsurance;
+
+        public SalarySlipGenerator(
+            IGrossSalaryCalculator grossSalaryCalculator,
+            INationalInsuranceCalculator nationalInsurance)
+        {
+            _grossSalaryCalculator = grossSalaryCalculator;
+            _nationalInsurance = nationalInsurance;
+        }
+
         public SalarySlip GenerateFor(Employee employee)
         {
             if (employee == null)
@@ -11,14 +22,11 @@ namespace SalarySlip.Services
                 throw new ArgumentNullException(nameof(employee));
             }
 
-            var grossSalary = CalculateGrossSalary(employee.AnnualGrossSalary);
-            var salarySlip = new SalarySlip(employee.Id, employee.Name, grossSalary);
-            return salarySlip;
-        }
+            var grossSalary = _grossSalaryCalculator.CalculateGrossSalary(employee.AnnualGrossSalary);
+            var nationalInsurance = _nationalInsurance.CalculateNationalInsurance(employee.AnnualGrossSalary);
 
-        private decimal CalculateGrossSalary(decimal employeeAnnualGrossSalary)
-        {
-            return Math.Round(employeeAnnualGrossSalary / 12, 2);
+            var salarySlip = new SalarySlip(employee.Id, employee.Name, grossSalary, nationalInsurance);
+            return salarySlip;
         }
     }
 }

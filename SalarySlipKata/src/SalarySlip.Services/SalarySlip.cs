@@ -2,11 +2,12 @@
 {
     public class SalarySlip
     {
-        public SalarySlip(int id, string name, decimal grossSalary)
+        public SalarySlip(int id, string name, decimal grossSalary, decimal nationalInsurance)
         {
             Id = id;
             Name = name;
             GrossSalary = grossSalary;
+            NationalInsurance = nationalInsurance;
         }
 
         public int Id { get; }
