@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GrossSalaryCalculatorShould.cs" />
+    <Compile Include="NationalInsuranceCalculatorShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalarySlipGeneratorShould.cs" />
   </ItemGroup>

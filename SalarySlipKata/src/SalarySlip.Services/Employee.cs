@@ -2,7 +2,10 @@
 {
     public class Employee
     {
-        public Employee(int id, string name, decimal annualGrossSalary)
+        public Employee(
+            int id,
+            string name,
+            decimal annualGrossSalary)
         {
             Id = id;
             Name = name;
