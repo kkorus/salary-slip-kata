@@ -8,6 +8,8 @@ namespace SalarySlip.Services
 {
     public class SalarySlip
     {
-        
+        public int Id { get; private set; }
+        public string Name { get; private set; }
+        public decimal GrossSalary { get; set; }
     }
 }

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalarySlip.Services", "src\SalarySlip.Services\SalarySlip.Services.csproj", "{9350D241-CF04-495F-B73E-25F216FBC06C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalarySlip.Services", "src\SalarySlip.Services\SalarySlip.Services.csproj", "{10927128-74F3-4E4B-93F2-BB6D29498B84}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2B6B60AE-D923-4DFA-B040-40A552ADBE6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalarySlip.Services.Tests", "test\SalarySlip.Services.Tests\SalarySlip.Services.Tests.csproj", "{97254629-4542-4E9C-A965-95A41B9C42CB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{91FA1B06-BE82-45D3-93E2-69A7E2D8D763}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3C059753-5FD0-4921-BE4F-9911967925D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalarySlip.Services.Tests", "test\SalarySlip.Services.Tests\SalarySlip.Services.Tests.csproj", "{FBB7AE71-57AF-45BA-88F2-33A7130B0D9B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{80D67827-5CE8-4CBB-9A76-30D1CA423590}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,20 +17,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9350D241-CF04-495F-B73E-25F216FBC06C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9350D241-CF04-495F-B73E-25F216FBC06C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9350D241-CF04-495F-B73E-25F216FBC06C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9350D241-CF04-495F-B73E-25F216FBC06C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FBB7AE71-57AF-45BA-88F2-33A7130B0D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FBB7AE71-57AF-45BA-88F2-33A7130B0D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FBB7AE71-57AF-45BA-88F2-33A7130B0D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FBB7AE71-57AF-45BA-88F2-33A7130B0D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10927128-74F3-4E4B-93F2-BB6D29498B84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10927128-74F3-4E4B-93F2-BB6D29498B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10927128-74F3-4E4B-93F2-BB6D29498B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10927128-74F3-4E4B-93F2-BB6D29498B84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97254629-4542-4E9C-A965-95A41B9C42CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97254629-4542-4E9C-A965-95A41B9C42CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97254629-4542-4E9C-A965-95A41B9C42CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97254629-4542-4E9C-A965-95A41B9C42CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{9350D241-CF04-495F-B73E-25F216FBC06C} = {2B6B60AE-D923-4DFA-B040-40A552ADBE6A}
-		{FBB7AE71-57AF-45BA-88F2-33A7130B0D9B} = {91FA1B06-BE82-45D3-93E2-69A7E2D8D763}
+		{10927128-74F3-4E4B-93F2-BB6D29498B84} = {3C059753-5FD0-4921-BE4F-9911967925D1}
+		{97254629-4542-4E9C-A965-95A41B9C42CB} = {80D67827-5CE8-4CBB-9A76-30D1CA423590}
 	EndGlobalSection
 EndGlobal
