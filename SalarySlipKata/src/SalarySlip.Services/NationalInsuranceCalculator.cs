@@ -13,8 +13,8 @@ namespace SalarySlip.Services
             if (employeeAnnualGrossSalary > NationalInsuranceTreshold)
             {
                 var taxtable = employeeAnnualGrossSalary - NationalInsuranceTreshold;
-                var insuranceTax = taxtable * NationalInsuranceInterest;
-                return Math.Round(insuranceTax / 12, 2);
+                var insurance = taxtable * NationalInsuranceInterest;
+                return Math.Round(insurance / 12, 2);
             }
 
             return 0;

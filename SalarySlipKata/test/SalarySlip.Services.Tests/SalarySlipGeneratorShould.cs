@@ -14,7 +14,8 @@ namespace SalarySlip.Services.Tests
         {
             var grossSalaryCalculator = new GrossSalaryCalculator();
             var nationalInsurance = new NationalInsuranceCalculator();
-            _salarySlipGenerator = new SalarySlipGenerator(grossSalaryCalculator, nationalInsurance);
+            var taxCalculator = new TaxCalculator();
+            _salarySlipGenerator = new SalarySlipGenerator(grossSalaryCalculator, nationalInsurance, taxCalculator);
         }
 
         [Test]
@@ -33,7 +34,7 @@ namespace SalarySlip.Services.Tests
         public void Return_SalarySlip_With_GrossSalary()
         {
             // Arrange
-            Employee employee = new Employee(12345, "John J Doe", 5000M);
+            var employee = new Employee(12345, "John J Doe", 5000M);
 
             // Act
             SalarySlip salarySlip = _salarySlipGenerator.GenerateFor(employee);
@@ -49,7 +50,7 @@ namespace SalarySlip.Services.Tests
         public void Return_SalarySlip_With_National_Insurance_Contribution()
         {
             // Arrange
-            Employee employee = new Employee(12345, "John J Doe", 9060M);
+            var employee = new Employee(12345, "John J Doe", 9060M);
 
             // Act
             SalarySlip salarySlip = _salarySlipGenerator.GenerateFor(employee);
@@ -59,6 +60,25 @@ namespace SalarySlip.Services.Tests
             salarySlip.Name.Should().Be("John J Doe");
             salarySlip.GrossSalary.Should().Be(755M);
             salarySlip.NationalInsurance.Should().Be(10M);
+        }
+
+        [Test]
+        public void Return_SalarySlip_With_Taxes()
+        {
+            // Arrange
+            var employee = new Employee(12345, "John J Doe", 12000);
+
+            // Act
+            SalarySlip salarySlip = _salarySlipGenerator.GenerateFor(employee);
+
+            // Assert
+            salarySlip.Id.Should().Be(12345);
+            salarySlip.Name.Should().Be("John J Doe");
+            salarySlip.GrossSalary.Should().Be(3750M);
+            salarySlip.NationalInsurance.Should().Be(39.40M);
+            salarySlip.TaxFree.Should().Be(916.67M);
+            salarySlip.TaxableIncome.Should().Be(83.33M);
+            salarySlip.TaxPayable.Should().Be(16.67M);
         }
     }
 }
