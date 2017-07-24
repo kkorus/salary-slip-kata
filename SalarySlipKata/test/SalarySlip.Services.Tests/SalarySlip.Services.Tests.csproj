@@ -53,6 +53,7 @@
     <Compile Include="NationalInsuranceCalculatorShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalarySlipGeneratorShould.cs" />
+    <Compile Include="TaxCalculatorShould.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

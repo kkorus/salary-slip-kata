@@ -28,7 +28,7 @@ namespace SalarySlip.Services.Tests
         }
 
         [Test]
-        public void Return_Tax_When_Annual_Salary_Exceeds_Threshold()
+        public void Return_Insurance_When_Annual_Salary_Exceeds_Threshold()
         {
             // Arrange
             var annualGrossSalary = 9060;

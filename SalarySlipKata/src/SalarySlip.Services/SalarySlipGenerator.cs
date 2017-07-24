@@ -6,13 +6,16 @@ namespace SalarySlip.Services
     {
         private readonly IGrossSalaryCalculator _grossSalaryCalculator;
         private readonly INationalInsuranceCalculator _nationalInsurance;
+        private readonly ITaxCalculator _taxCalculator;
 
         public SalarySlipGenerator(
-            IGrossSalaryCalculator grossSalaryCalculator,
-            INationalInsuranceCalculator nationalInsurance)
+            IGrossSalaryCalculator grossSalaryCalculator, 
+            INationalInsuranceCalculator nationalInsurance, 
+            ITaxCalculator taxCalculator)
         {
             _grossSalaryCalculator = grossSalaryCalculator;
             _nationalInsurance = nationalInsurance;
+            _taxCalculator = taxCalculator;
         }
 
         public SalarySlip GenerateFor(Employee employee)
