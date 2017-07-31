@@ -74,7 +74,7 @@ namespace SalarySlip.Services.Tests
             // Assert
             salarySlip.Id.Should().Be(12345);
             salarySlip.Name.Should().Be("John J Doe");
-            salarySlip.GrossSalary.Should().Be(3750M);
+            salarySlip.GrossSalary.Should().Be(1000);
             salarySlip.NationalInsurance.Should().Be(39.40M);
             salarySlip.TaxFree.Should().Be(916.67M);
             salarySlip.TaxableIncome.Should().Be(83.33M);

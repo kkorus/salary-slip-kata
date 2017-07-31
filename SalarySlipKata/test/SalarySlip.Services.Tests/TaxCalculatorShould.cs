@@ -16,10 +16,9 @@ namespace SalarySlip.Services.Tests
 
         [TestCase(100)]
         [TestCase(11000)]
-        public void Return_0_When_Annual_Salary_Dont_Exceeds_Threshold()
+        public void Return_0_When_Annual_Salary_Dont_Exceeds_Threshold(decimal annualGrossSalary)
         {
             // Arrange
-            var annualGrossSalary = 12000M;
 
             // Act
             Tax tax = _taxCalculator.CalculateTax(annualGrossSalary);
