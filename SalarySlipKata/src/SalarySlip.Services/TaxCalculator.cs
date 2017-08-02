@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SalarySlip.Services
 {
@@ -27,34 +22,4 @@ namespace SalarySlip.Services
             return new NoTax();
         }
     }
-
-    public class Tax
-    {
-        public decimal TaxFree { get; set; }
-
-        public decimal TaxableIncome { get; set; }
-
-        public decimal TaxPayable { get; set; }
-
-        public Tax(decimal taxFree, decimal taxableIncome, decimal taxPayable)
-        {
-            TaxFree = taxFree;
-            TaxableIncome = taxableIncome;
-            TaxPayable = taxPayable;
-        }
-    }
-
-    public class NoTax : Tax
-    {
-        public NoTax() : base(0, 0, 0)
-        {
-
-        }
-    }
-
-    public interface ITaxCalculator
-    {
-        Tax CalculateTax(decimal annualGrossSalary);
-    }
-
 }
