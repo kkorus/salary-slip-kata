@@ -63,7 +63,7 @@ namespace SalarySlip.Services.Tests
         }
 
         [Test]
-        public void Return_SalarySlip_With_Taxes()
+        public void Return_SalarySlip_With_BasicRate_Taxes()
         {
             // Arrange
             var employee = new Employee(12345, "John J Doe", 12000);
@@ -76,6 +76,25 @@ namespace SalarySlip.Services.Tests
             salarySlip.Name.Should().Be("John J Doe");
             salarySlip.GrossSalary.Should().Be(1000);
             salarySlip.NationalInsurance.Should().Be(39.40M);
+            salarySlip.TaxFree.Should().Be(916.67M);
+            salarySlip.TaxableIncome.Should().Be(83.33M);
+            salarySlip.TaxPayable.Should().Be(16.67M);
+        }
+
+        [Test]
+        public void Return_SalarySlip_With_HigherRate_Taxes()
+        {
+            // Arrange
+            var employee = new Employee(12345, "John J Doe", 45000);
+
+            // Act
+            SalarySlip salarySlip = _salarySlipGenerator.GenerateFor(employee);
+
+            // Assert
+            salarySlip.Id.Should().Be(12345);
+            salarySlip.Name.Should().Be("John J Doe");
+            salarySlip.GrossSalary.Should().Be(3750M);
+            salarySlip.NationalInsurance.Should().Be(352.73M);
             salarySlip.TaxFree.Should().Be(916.67M);
             salarySlip.TaxableIncome.Should().Be(83.33M);
             salarySlip.TaxPayable.Should().Be(16.67M);
